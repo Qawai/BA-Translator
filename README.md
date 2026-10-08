@@ -15,39 +15,17 @@ A real-time English → Russian overlay translator for **Blue Archive** (BlueSta
 ## Requirements
 
 - Windows 10/11
-- Python 3.11+
+- Python 3.11+ (только для запуска из исходников)
 - BlueStacks (or any Android emulator) or Steam version of Blue Archive
 
-## Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Qawai/BA-Translator.git
-   cd BA-Translator
-   ```
-
-2. Create a virtual environment:
-   ```bash
-   python -m venv venv_win
-   venv_win\Scripts\activate
-   ```
-
-3. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. Install Tesseract OCR:
-   - Download from: https://github.com/UB-Mannheim/tesseract/wiki
-   - Install to `C:\Program Files\Tesseract-OCR`
-   - Copy `eng.traineddata` and `jpn.traineddata` to `data/tessdata/`
+**Tesseract НЕ нужен** — основной OCR-движок встроенный (Windows.Media.Ocr / winocr).
 
 ## Как запустить
 
-### Способ 1: Готовый exe (рекомендуется)
+### Способ 1: Готовый exe (рекомендуется, ничего ставить не надо)
 
-1. Скачай репозиторий: `git clone https://github.com/Qawai/BA-Translator.git` или кнопкой **Code → Download ZIP**.
-2. Запусти `BA_Translator.exe` (если его нет — собери его, см. ниже).
+1. Скачай `BA_Translator.exe` со страницы [Releases](https://github.com/Qawai/BA-Translator/releases).
+2. Запусти его — никакой установки и зависимостей не нужно.
 3. В окне настроек нажми **«Старт»** (окно настроек скроется).
 4. Открой Blue Archive в BlueStacks — перевод появится поверх игры.
 5. Чтобы вернуть окно настроек — нажми **«Стоп»** или иконку в трее.
@@ -85,14 +63,6 @@ venv_win\Scripts\pyinstaller --noconfirm --clean Translator_for_BA_win.spec
 5. **Стоп** (или иконка в трее) — остановить перевод и вернуть окно настроек.
 
 > **Важно:** окно эмулятора не должно быть закрыто другими окнами в зоне диалогов (низ экрана) — иначе OCR не увидит текст.
-
-## Building the Executable
-
-```bash
-pyinstaller --noconfirm --clean Translator_for_BA_win.spec
-```
-
-The executable will be in `dist/BA_Translator.exe`.
 
 ## Configuration
 
