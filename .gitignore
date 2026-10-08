@@ -1,0 +1,91 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environment
+venv_win/
+venv/
+
+# PyInstaller build artifacts
+*.manifest
+*.spec.bak
+Translator_diag.spec
+Translator_for_BA_debug.spec
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Project-specific temp/diag/test files
+_diag_now.py
+_diag_now.png
+_route_test.log
+_archive_list.txt
+_pyz_list.txt
+*.log
+app_log*.txt
+debug_log.txt
+decrypt_log.txt
+
+# User data (not committed)
+data/config.json
+data/dialogs_db.json
+data/tessdata/
+data/screenshots/
+
+# Large binaries / game data extraction
+extracted/
+global-metadata.dat
+tables/
+tables_nx/
+*.dll
+*.exe
+*.traineddata
+*.dat
+ExcelDB.db
+Excel.zip
+*.db.bak
+ba_data/Scenario*.json
+/ba_scripts.db
+
+# Build artifacts
+BA_Translator.exe
+*.tar.gz
+*.zip
+
+# Crypto/DB tools (not part of translator)
+ba_crypto.py
+build_ba_db.py
+decrypt_db.py
+extract_all.py
+probe_db.py
+scan_tables.py
+test_mock.py
+
+# Debug version
+Translator_for_BA_debug.py
+
+# Test harnesses (kept locally, not in repo)
+_bench_ocr.py
+_check_namepath.py
+_smoke5.py
+_smoke6.py
+_smoke7.py
+_smoke_engines.py
+_test_engine_route.py
+_test_flicker.py
+_test_own_strip.py
+_test_typewriter.py

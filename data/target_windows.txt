@@ -1,0 +1,39 @@
+﻿# Target windows for BA Translator
+# One entry per line, case-insensitive substring matching
+# Lines starting with # are comments
+# Format: process_name | window_title  (either side optional)
+
+# Blue Archive (Windows native)
+bluearchive.exe | blue archive
+
+# Blue Archive via Wine/Proton (Linux)
+wine-preloader |
+wine64-preloader |
+
+# Notepad (Windows)
+notepad.exe | Р±Р»РѕРєРЅРѕС‚
+
+# Notepad / text editors (Linux)
+gedit |
+kate |
+mousepad |
+leafpad |
+pluma |
+kwrite |
+
+# Generic text editors (cross-platform)
+sublime_text |
+code |
+atom |
+brackets |
+
+# Roblox
+robloxplayerbeta.exe | roblox
+roblox.exe | roblox
+
+# Browser-based translation targets (titles only)
+ | manga reader
+ | visual novel
+  
+# BlueStacks emulator (Blue Archive Android)  
+hd-player.exe | bluestacks

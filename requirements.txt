@@ -1,0 +1,15 @@
+pyqt5==5.15.11
+mss==9.0.2
+opencv-python==4.10.0.84
+pytesseract==0.3.13
+pynput==1.7.7
+psutil==6.1.1
+pyinstaller==6.11.1
+pywin32==306
+# Primary OCR (dev-only extras for the exe are in the spec):
+# winocr = Windows.Media.Ocr (fast, bundled into the exe)
+winocr==0.0.15
+# Optional rapidocr backend (dev only, NOT bundled into the exe —
+# onnxruntime+winrt crash when co-loaded; ocr_engine guards this)
+rapidocr==3.9.2
+onnxruntime==1.30.0
