@@ -42,16 +42,49 @@ A real-time English → Russian overlay translator for **Blue Archive** (BlueSta
    - Install to `C:\Program Files\Tesseract-OCR`
    - Copy `eng.traineddata` and `jpn.traineddata` to `data/tessdata/`
 
-## Usage
+## Как запустить
 
-1. Run the translator:
-   ```bash
-   python Translator_for_BA.py
-   ```
+### Способ 1: Готовый exe (рекомендуется)
 
-2. Click "Start" in the settings window
-3. Open Blue Archive in BlueStacks
-4. The translator will automatically detect and translate dialogue
+1. Скачай репозиторий: `git clone https://github.com/Qawai/BA-Translator.git` или кнопкой **Code → Download ZIP**.
+2. Запусти `BA_Translator.exe` (если его нет — собери его, см. ниже).
+3. В окне настроек нажми **«Старт»** (окно настроек скроется).
+4. Открой Blue Archive в BlueStacks — перевод появится поверх игры.
+5. Чтобы вернуть окно настроек — нажми **«Стоп»** или иконку в трее.
+
+### Способ 2: Из исходников (Python)
+
+```bat
+git clone https://github.com/Qawai/BA-Translator.git
+cd BA-Translator
+
+python -m venv venv_win
+venv_win\Scripts\activate
+pip install -r requirements.txt
+
+python Translator_for_BA.py
+```
+
+Далее — «Старт» в окне настроек и открыть игру.
+
+### Способ 3: Собрать exe самостоятельно
+
+```bat
+venv_win\Scripts\pip install pyinstaller
+venv_win\Scripts\pyinstaller --noconfirm --clean Translator_for_BA_win.spec
+```
+
+Готовый файл: `dist\BA_Translator.exe`.
+
+### Порядок работы
+
+1. Запусти переводчик (exe или Python).
+2. Выбери язык игры (EN/JA) и целевой язык (RU) в настройках.
+3. Нажми **Старт** — окно настроек скроется, начнётся захват экрана.
+4. Открой Blue Archive: переводчик сам найдёт окно эмулятора и начнёт переводить диалоги поверх игры.
+5. **Стоп** (или иконка в трее) — остановить перевод и вернуть окно настроек.
+
+> **Важно:** окно эмулятора не должно быть закрыто другими окнами в зоне диалогов (низ экрана) — иначе OCR не увидит текст.
 
 ## Building the Executable
 
